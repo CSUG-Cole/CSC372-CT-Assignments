@@ -4,13 +4,13 @@ import java.text.DecimalFormat;
 
 public class BankAccount {
     /* Formater for better printing */
-    private static DecimalFormat dollarFormat = new DecimalFormat("#0.00");
+    final protected static DecimalFormat dollarFormat = new DecimalFormat("#0.00");
 
     /* BankAccount instance members */
     private String firstName;
     private String lastName;
     private int accountID;
-    private double balance;
+    protected double balance;
 
     public BankAccount() {
 
@@ -45,10 +45,10 @@ public class BankAccount {
     /* Print all account information to console */
     public void accountSummary() {
         System.out.println("Summary of Bank Account Information:");
-        System.out.println("First Name:  " + this.firstName);
-        System.out.println("Last Name:   " + this.lastName);
-        System.out.println("Account ID:  " + this.accountID);
-        System.out.println("Balance:     $" + dollarFormat.format(this.balance));
+        System.out.println("First Name:     " + this.firstName);
+        System.out.println("Last Name:      " + this.lastName);
+        System.out.println("Account ID:     " + this.accountID);
+        System.out.println("Balance:        $" + dollarFormat.format(this.balance));
     }
 
     /* Setters for BankAccount */
