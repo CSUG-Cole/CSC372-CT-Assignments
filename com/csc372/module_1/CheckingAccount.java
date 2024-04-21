@@ -12,11 +12,11 @@ public class CheckingAccount extends BankAccount {
         }
 
         this.balance -= amount;
-        System.out.println("Current account balance: $" + BankAccount.dollarFormat.format(this.balance));
+        System.out.println("Current account balance: $" + BankAccount.dollarFormat.format(this.balance) + "\n");
     }
 
     public void displayAccount() {
         super.accountSummary();
-        System.out.println("Interest rate:  " + (100 * this.interest) + "%");
+        System.out.println("Interest rate:  " + (100 * this.interest) + "%\n");
     }
 }
