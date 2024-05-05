@@ -12,6 +12,9 @@ public class Menu extends JFrame {
     private JPanel panel;
     private final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     private final float greenHue = 0.33f;
+    private final float saturation = (float) Math.random();
+    private final float brightness = 0.5f + (float) Math.random() * 0.5f;
+    private final Color backgroundColor = Color.getHSBColor(greenHue, saturation, brightness);
 
     public Menu() {
         /* Initialize the frame */
@@ -65,12 +68,7 @@ public class Menu extends JFrame {
 
         /* Action for changing background color to a green with random saturation and brightness */
         colorItem.addActionListener(e -> {
-            /* Random saturation */
-            float saturation = (float) Math.random();
-            /* Random brightness */
-            float brightness = 0.5f + (float) Math.random() * 0.5f;
-            Color color = Color.getHSBColor(greenHue, saturation, brightness);
-            panel.setBackground(color);
+            panel.setBackground(backgroundColor);
         });
 
         /* Action for exiting the program */
