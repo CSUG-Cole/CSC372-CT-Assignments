@@ -50,7 +50,7 @@ public class Menu extends JFrame {
 
         /* Action for showing date and time */
         dateItem.addActionListener(e -> {
-            textArea.setText(sdf.format(new Date()));
+            textArea.append(sdf.format(new Date()));
         });
 
         /* Action for saving to a file */
