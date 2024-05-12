@@ -8,7 +8,7 @@ public class CheckingAccount extends BankAccount {
         if (amount > this.balance) {
             System.out.println("Withdrawaling more than the current account balance.");
             System.out.println("$30 overdraft fee assessed.");
-            amount += 30.0;
+            this.balance -= 30.0;
         }
 
         this.balance -= amount;

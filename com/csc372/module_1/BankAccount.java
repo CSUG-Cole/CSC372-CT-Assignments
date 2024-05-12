@@ -12,12 +12,8 @@ public class BankAccount {
     private int accountID;
     protected double balance;
 
-    public BankAccount() {
-
-    }
-
     /* Constructor method */
-    public void constructor() { this.balance = 0.0; }
+    public BankAccount() { this.balance = 0.0; }
 
     /* Deposit method to add @amount to bank account balance */
     public void deposit(double amount) {

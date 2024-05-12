@@ -4,6 +4,7 @@ public class Main
 {
     public static void main(String[] args) {
         CheckingAccount checkingAccount = new CheckingAccount();
+
         /* Initialize the account */
         checkingAccount.setFirstName("John");
         checkingAccount.setLastName("Doe");
