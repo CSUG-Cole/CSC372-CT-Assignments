@@ -16,7 +16,7 @@ public class Cylinder extends Shape
     @Override
     public double surfaceArea() { return 2 * Math.PI * radius * (radius + height); }
 
-    /* Formula is πhr^2 */
+    /* Formula is πhr² */
     @Override
     public double volume() { return Math.PI * height * radius * radius; }
 

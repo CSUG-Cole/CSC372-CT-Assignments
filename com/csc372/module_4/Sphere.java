@@ -8,11 +8,11 @@ public class Sphere extends Shape
     public Sphere(double radius) { this.radius = radius; }
 
     /* Override base class methods */
-    /* Formula 4πr^2 */
+    /* Formula 4πr²^2 */
     @Override
     public double surfaceArea() { return 4 * Math.PI * radius * radius; }
 
-    /* Formula is 4/3πr^3 */
+    /* Formula is 4/3πr³ */
     @Override
     public double volume() { return (4.0 / 3) * Math.PI * radius * radius * radius; }
 
