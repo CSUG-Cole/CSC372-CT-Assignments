@@ -14,7 +14,7 @@ public class Student
 
     @Override
     public String toString() {
-        return this.rollno + ": " + this.name + ", " + this.address;
+        return this.rollno + ": " + this.name + " lives at " + this.address;
     }
 
     /* Getters */
