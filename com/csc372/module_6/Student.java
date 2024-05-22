@@ -12,6 +12,11 @@ public class Student
         this.address = address;
     }
 
+    @Override
+    public String toString() {
+        return this.rollno + ": " + this.name + ", " + this.address;
+    }
+
     /* Getters */
     int getRollno() { return this.rollno; }
     String getName() { return this.name; }
