@@ -74,7 +74,7 @@ public class Main
         int choice = RANDOM.nextInt(RANDOM_CHOICES);
 
         for (int i = 0; i < RANDOM_CHOICES; i++) {
-            choice = (choice + i) % RANDOM_CHOICES;
+            choice = (choice + 1) % RANDOM_CHOICES;
             students.add(makeRandomStudent(choice));
         }
     }
