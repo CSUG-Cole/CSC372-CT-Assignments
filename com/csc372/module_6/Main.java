@@ -54,6 +54,14 @@ public class Main
         /* Display the students before sorting. */
         System.out.println("Students before sorting:");
         displayStudents(students);
+        System.out.println("");
+
+        /* Sort the students */
+        MergeSort.mergeSort(students);
+
+        /* Display the students after sorting. */
+        System.out.println("Students after sorting:");
+        displayStudents(students);
     }
 
     private static void displayStudents(ArrayList<Student> students) {
