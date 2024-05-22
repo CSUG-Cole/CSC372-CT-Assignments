@@ -19,6 +19,10 @@ import java.util.Random;
 public class Main
 {
     private static final Random RANDOM = new Random();
+    private static final int[] ROLL_NUMBERS = {
+        4829, 1234, 5678, 2468, 7890,
+        3456, 6482, 6789, 2345, 8901
+    };
     private static final String[] FIRST_NAMES = {
         "John", "Emma", "Michael", "Sophia", "William",
         "Isabella", "David", "Mia", "Joseph", "Charlotte"
@@ -43,18 +47,27 @@ public class Main
     private static final int RANDOM_CHOICES = 10;
 
     public static void main(String[] args) {
+        /* Generate the students */
         ArrayList<Student> students = new ArrayList<>();
-        generateStudents(students, RANDOM_CHOICES);
+        generateStudents(students);
 
     }
 
-    private static Student makeRandomStudent() {
 
+    private static Student makeRandomStudent(int choice) {
+        return new Student(
+            ROLL_NUMBERS[choice],
+            LAST_NAMES[choice] + ", " + FIRST_NAMES[choice],
+            ADDRESSES[choice]
+        );
     }
 
-    private static void generateStudents(ArrayList<Student> students, int count) {
-        for (int i = 0; i < count; i++) {
-            students.add(makeRandomStudent());
+    private static void generateStudents(ArrayList<Student> students) {
+        int choice = RANDOM.nextInt(RANDOM_CHOICES);
+
+        for (int i = 0; i < RANDOM_CHOICES; i++) {
+            choice = (choice + i) % RANDOM_CHOICES;
+            students.add(makeRandomStudent(choice));
         }
     }
 }
