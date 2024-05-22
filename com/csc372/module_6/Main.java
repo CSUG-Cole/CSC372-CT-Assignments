@@ -51,8 +51,16 @@ public class Main
         ArrayList<Student> students = new ArrayList<>();
         generateStudents(students);
 
+        /* Display the students before sorting. */
+        System.out.println("Students before sorting:");
+        displayStudents(students);
     }
 
+    private static void displayStudents(ArrayList<Student> students) {
+        for (Student student : students) {
+            System.out.println(student);
+        }
+    }
 
     private static Student makeRandomStudent(int choice) {
         return new Student(
